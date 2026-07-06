@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leela Satish Nalluri &amp; Sree Sai Jyothsna Jampala — Wedding Invitation</title>
+<meta property="og:title" content="Leela Satish Nalluri & Sree Sai Jyothsna Jampala — Wedding Invitation">
+<meta property="og:description" content="Wedding: Friday, Aug 14, 2026 · Muhurtham 11:10 PM · Fairview, TX. Reception: Saturday, Aug 15 · 6 PM · Plano, TX">
+<meta property="og:image" content="images/invitation-poster.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --royal:#1d3d8f;        /* royal blue */
+    --deep:#0d1f52;         /* midnight navy */
+    --gold:#c9973c;
+    --gold-bright:#e6b95c;
+    --cream:#f7f8fc;        /* cool ivory */
+    --accent:#4a6fd4;       /* lighter royal accent */
+    --leaf:#4c6b3c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Karla',sans-serif;
+    background:var(--cream);
+    color:var(--deep);
+    font-size:17px;line-height:1.6;
+  }
+  .telugu{font-family:'Noto Serif Telugu',serif}
+
+  /* ================= Opening cover ================= */
+  #cover{
+    position:fixed;inset:0;z-index:50;
+    background:
+      radial-gradient(circle at 50% 0%, #2c55b8, var(--royal) 55%, var(--deep));
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;color:var(--cream);
+    transition:opacity .9s ease, visibility .9s;
+    padding:24px;
+  }
+  #cover.opened{opacity:0;visibility:hidden}
+  .cover-inner{max-width:520px}
+  .cover-inner .bless{
+    font-family:'Noto Serif Telugu',serif;
+    color:var(--gold-bright);font-size:22px;letter-spacing:.1em;
+  }
+  .cover-inner .orn{color:var(--gold);font-size:20px;margin:14px 0;letter-spacing:.5em}
+  .cover-inner h1{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:clamp(32px,7.5vw,50px);line-height:1.15;margin:10px 0;
+  }
+  .cover-inner .amp{
+    display:block;color:var(--gold-bright);
+    font-style:italic;font-weight:500;font-size:.6em;margin:6px 0;
+  }
+  .cover-inner .sub{
+    letter-spacing:.3em;text-transform:uppercase;font-size:12px;
+    color:rgba(247,248,252,.75);margin-top:14px;
+  }
+  #openBtn{
+    margin-top:36px;
+    background:var(--gold);color:var(--deep);
+    border:none;padding:16px 44px;
+    font-family:'Karla',sans-serif;font-weight:700;font-size:14px;
+    letter-spacing:.22em;text-transform:uppercase;
+    cursor:pointer;border-radius:999px;
+    box-shadow:0 6px 24px rgba(0,0,0,.35);
+    transition:transform .2s ease, background .2s ease;
+  }
+  #openBtn:hover{background:var(--gold-bright);transform:translateY(-2px)}
+  @media(prefers-reduced-motion:no-preference){
+    #openBtn{animation:pulse 2.4s ease infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(0,0,0,.35)}50%{box-shadow:0 6px 24px rgba(230,185,92,.5)}}
+  }
+
+  /* ================= Header band ================= */
+  header{
+    background:linear-gradient(180deg,var(--royal),var(--deep));
+    color:var(--cream);text-align:center;
+    padding:64px 20px 88px;position:relative;
+  }
+  header .bless{color:var(--gold-bright);font-size:20px}
+  header h1{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:clamp(30px,6.5vw,46px);line-height:1.15;margin:14px 0 4px;
+  }
+  header .amp{color:var(--gold-bright);font-style:italic;font-weight:500}
+  header p{letter-spacing:.28em;text-transform:uppercase;font-size:12px;color:rgba(247,248,252,.75);margin-top:10px}
+  .scallop{
+    position:absolute;left:0;right:0;bottom:-1px;height:24px;
+    background:
+      radial-gradient(circle at 12px -6px, transparent 16px, var(--cream) 17px);
+    background-size:24px 24px;background-repeat:repeat-x;
+  }
+  #musicBtn{
+    position:absolute;top:16px;right:16px;
+    background:rgba(247,248,252,.12);
+    border:1px solid rgba(230,185,92,.5);
+    color:var(--gold-bright);
+    padding:10px 18px;border-radius:999px;
+    font-family:'Karla',sans-serif;font-size:13px;font-weight:600;
+    cursor:pointer;transition:background .2s ease;
+  }
+  #musicBtn:hover{background:rgba(247,248,252,.2)}
+
+  /* ================= Layout ================= */
+  main{max-width:680px;margin:0 auto;padding:48px 20px 80px}
+  section{margin-bottom:56px}
+  h2{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:34px;text-align:center;color:var(--royal);
+  }
+  .sub-telugu{
+    font-family:'Noto Serif Telugu',serif;text-align:center;
+    color:var(--gold);font-size:18px;margin:4px 0 32px;
+  }
+
+  /* Poster */
+  .poster{
+    display:block;width:100%;border-radius:8px;
+    border:6px solid #fff;outline:1px solid rgba(29,61,143,.15);
+    box-shadow:0 16px 48px rgba(13,31,82,.18);
+  }
+  .cta-row{display:flex;gap:14px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:14px 32px;border-radius:999px;
+    font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;
+    text-decoration:none;cursor:pointer;border:none;
+    transition:transform .2s ease, box-shadow .2s ease;
+    font-family:'Karla',sans-serif;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-royal{background:var(--royal);color:var(--cream);box-shadow:0 6px 20px rgba(29,61,143,.35)}
+  .btn-gold{background:transparent;color:var(--royal);border:2px solid var(--gold)}
+  .btn-gold:hover{background:var(--gold);color:var(--deep)}
+
+  /* Event cards */
+  .event{
+    background:#fff;border-radius:16px;
+    padding:36px 28px;text-align:center;
+    border-top:5px solid var(--gold);
+    box-shadow:0 10px 32px rgba(13,31,82,.08);
+  }
+  .event + .event{margin-top:24px}
+  .event .ico{font-size:30px}
+  .event h3{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:28px;color:var(--royal);margin:10px 0 2px;
+  }
+  .event .venue-name{font-weight:700;font-size:17px;color:var(--deep);margin-top:10px}
+  .event .addr{font-size:15px;color:#5a6580}
+  .event .when{
+    display:inline-block;margin-top:14px;
+    background:var(--cream);border:1px solid rgba(29,61,143,.18);
+    border-radius:999px;padding:8px 20px;
+    font-size:15px;font-weight:600;color:var(--royal);
+  }
+  .event .muhurtham{
+    margin-top:10px;font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:19px;color:var(--gold);
+  }
+  .link-row{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+  .link-row a{
+    font-size:14px;font-weight:600;color:var(--royal);
+    text-decoration:none;border:1.5px solid var(--gold);
+    padding:10px 20px;border-radius:999px;transition:background .2s ease;
+  }
+  .link-row a:hover{background:var(--gold);color:var(--deep)}
+
+  /* RSVP */
+  .rsvp-card{
+    background:#fff;border-radius:16px;padding:44px 32px;
+    box-shadow:0 16px 48px rgba(13,31,82,.1);
+    border:1px solid rgba(201,151,60,.35);
+    position:relative;overflow:hidden;
+  }
+  .rsvp-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:6px;
+    background:repeating-linear-gradient(90deg,var(--royal) 0 24px,var(--gold) 24px 48px);
+  }
+  label{display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--royal);margin-bottom:10px}
+  input[type=text],input[type=tel]{
+    width:100%;padding:13px 14px;margin-bottom:26px;
+    border:1.5px solid rgba(29,61,143,.25);border-radius:8px;
+    font-family:'Karla',sans-serif;font-size:16px;color:var(--deep);
+    background:var(--cream);
+  }
+  input:focus{outline:none;border-color:var(--gold)}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .choices{display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+  .choices input{position:absolute;opacity:0;pointer-events:none}
+  .choices span{
+    display:block;padding:11px 20px;border-radius:999px;
+    border:1.5px solid rgba(29,61,143,.3);font-size:15px;font-weight:600;
+    cursor:pointer;user-select:none;transition:all .18s ease;color:var(--royal);
+  }
+  .choices input:checked + span{background:var(--royal);border-color:var(--royal);color:var(--cream)}
+  .choices input:focus-visible + span{outline:2px solid var(--gold);outline-offset:2px}
+  .rsvp-card button{width:100%}
+  .thanks{display:none;text-align:center;padding:16px 0}
+  .thanks h3{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--leaf);margin-bottom:6px}
+  .thanks .telugu{color:var(--gold);font-size:18px}
+
+  footer{
+    background:linear-gradient(180deg,var(--deep),var(--royal));
+    color:var(--cream);text-align:center;padding:56px 20px;
+  }
+  footer .with-love{font-style:italic;font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(247,248,252,.8)}
+  footer h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;margin:8px 0}
+  footer .telugu{color:var(--gold-bright);font-size:18px;margin-top:6px}
+
+  @media(prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ Opening cover ============ -->
+<div id="cover">
+  <div class="cover-inner">
+    <p class="bless">శ్రీ రస్తు</p>
+    <p class="orn">✦ ✦ ✦</p>
+    <h1>Leela Satish Nalluri <span class="amp">&amp;</span> Sree Sai Jyothsna Jampala</h1>
+    <p class="sub">Wedding Invitation</p>
+    <button id="openBtn">Open Invitation</button>
+  </div>
+</div>
+
+<!-- ============ Header ============ -->
+<header>
+  <button id="musicBtn" aria-pressed="false">🎵 Play music</button>
+  <p class="bless telugu">శ్రీ రస్తు</p>
+  <h1>Leela Satish Nalluri <span class="amp">&amp;</span> Sree Sai Jyothsna Jampala</h1>
+  <p>Friday · August 14, 2026 · Fairview, Texas</p>
+  <div class="scallop" aria-hidden="true"></div>
+</header>
+<audio id="weddingAudio" src="music/Wedding.mp3" loop preload="none"></audio>
+
+<main>
+
+  <!-- Poster -->
+  <section class="reveal">
+    <img class="poster" src="images/invitation-poster.png" alt="Wedding invitation poster for Leela Satish Nalluri and Sree Sai Jyothsna Jampala">
+    <div class="cta-row">
+      <a class="btn btn-royal" href="#rsvp">RSVP now</a>
+      <button class="btn btn-gold" id="shareBtn">Share invitation</button>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="reveal">
+    <h2>Wedding Events</h2>
+    <p class="sub-telugu">మీ రాక మా ఆనందం</p>
+
+    <div class="event">
+      <div class="ico" aria-hidden="true">💍</div>
+      <h3>Wedding</h3>
+      <p class="venue-name">The Meridian Venue</p>
+      <p class="addr">351 Southwind Ln, Fairview, TX 75069</p>
+      <span class="when">Friday, August 14, 2026 · Event begins 8:00 PM</span>
+      <p class="muhurtham">Muhurtham at 11:10 PM</p>
+      <div class="link-row">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Meridian+Venue+351+Southwind+Ln+Fairview+TX+75069" target="_blank" rel="noopener">Open in Maps</a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Leela+Satish+%26+Sree+Sai+Jyothsna+Wedding&amp;dates=20260815T010000Z/20260815T053000Z&amp;details=Event+begins+8:00+PM+%C2%B7+Muhurtham+at+11:10+PM&amp;location=The+Meridian+Venue,+351+Southwind+Ln,+Fairview,+TX+75069" target="_blank" rel="noopener">Add to calendar</a>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="ico" aria-hidden="true">🥂</div>
+      <h3>Reception</h3>
+      <p class="venue-name">Elegance Ballroom</p>
+      <p class="addr">8740 Ohio Dr A1, Plano, TX 75024</p>
+      <span class="when">Saturday, August 15, 2026 · 6:00 PM</span>
+      <div class="link-row">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Elegance+Ballroom+8740+Ohio+Dr+A1+Plano+TX+75024" target="_blank" rel="noopener">Open in Maps</a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Leela+Satish+%26+Sree+Sai+Jyothsna+Wedding+Reception&amp;dates=20260815T230000Z/20260816T030000Z&amp;details=Reception+at+6:00+PM&amp;location=Elegance+Ballroom,+8740+Ohio+Dr+A1,+Plano,+TX+75024" target="_blank" rel="noopener">Add to calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="reveal" id="rsvp">
+    <h2>RSVP</h2>
+    <p class="sub-telugu">శుభాకాంక్షలు</p>
+    <div class="rsvp-card">
+      <form id="rsvpForm" method="POST">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+
+        <label>Will you attend?</label>
+        <div class="choices" role="radiogroup" aria-label="Will you attend?">
+          <label><input type="radio" name="attending" value="Yes, I will attend" required><span>Yes, I will attend</span></label>
+          <label><input type="radio" name="attending" value="Sorry, I can't attend"><span>Sorry, I can't attend</span></label>
+          <label><input type="radio" name="attending" value="Maybe"><span>Maybe</span></label>
+        </div>
+
+        <label>Meal preference</label>
+        <div class="choices" role="radiogroup" aria-label="Meal preference">
+          <label><input type="radio" name="meal" value="Non-Veg"><span>Non-Veg</span></label>
+          <label><input type="radio" name="meal" value="Veggie"><span>Veggie</span></label>
+        </div>
+
+        <button type="submit" class="btn btn-royal">Submit RSVP</button>
+      </form>
+      <div class="thanks" id="thanks">
+        <h3>Thank you!</h3>
+        <p class="telugu">మీ రాక మా ఆనందం</p>
+        <p>We can't wait to celebrate with you.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="with-love">With love,</p>
+  <h3>Leela Satish Nalluri &amp; Sree Sai Jyothsna Jampala</h3>
+  <p class="telugu">మీ రాక మా ఆనందం</p>
+</footer>
+
+<script>
+  // --- Opening cover ---
+  const cover = document.getElementById('cover');
+  const audio = document.getElementById('weddingAudio');
+  const musicBtn = document.getElementById('musicBtn');
+
+  document.getElementById('openBtn').addEventListener('click', () => {
+    cover.classList.add('opened');
+    audio.play().then(() => setMusicUI(true)).catch(() => {});
+  });
+
+  // --- Music toggle ---
+  function setMusicUI(playing){
+    musicBtn.textContent = playing ? '⏸ Pause music' : '🎵 Play music';
+    musicBtn.setAttribute('aria-pressed', playing);
+  }
+  musicBtn.addEventListener('click', () => {
+    if (audio.paused) { audio.play(); setMusicUI(true); }
+    else { audio.pause(); setMusicUI(false); }
+  });
+
+  // --- Share ---
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    const shareData = {
+      title: 'Leela Satish Nalluri & Sree Sai Jyothsna Jampala — Wedding Invitation',
+      text: 'Wedding: Friday, Aug 14, 2026 · Muhurtham 11:10 PM · Fairview, TX. Reception: Saturday, Aug 15 · 6 PM · Plano, TX',
+      url: location.href
+    };
+    if (navigator.share) {
+      try { await navigator.share(shareData); } catch {}
+    } else {
+      await navigator.clipboard.writeText(location.href);
+      const btn = document.getElementById('shareBtn');
+      const old = btn.textContent;
+      btn.textContent = 'Link copied!';
+      setTimeout(() => btn.textContent = old, 2000);
+    }
+  });
+
+  // --- Scroll reveals ---
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // --- RSVP form ---
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyBb3JrnWWapQsVW09nYqPnGKPc1dQN8PyWFTjwPNvq3-9fmZnkn3cpNrR5Slb2xFNkqw/exec';
+
+  const form = document.getElementById('rsvpForm');
+  const thanks = document.getElementById('thanks');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type=submit]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new FormData(form)
+      });
+      form.style.display = 'none';
+      thanks.style.display = 'block';
+    } catch {
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
