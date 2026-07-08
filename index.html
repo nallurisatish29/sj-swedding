@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leela Satish &amp; Sri Sai Jyothsna — Wedding Invitation</title>
-<meta property="og:title" content="Leela Satish & Sree Sai Jyothsna — Wedding Invitation">
+<meta property="og:title" content="Leela Satish & Sri Sai Jyothsna — Wedding Invitation">
 <meta property="og:description" content="Wedding: Friday, Aug 14, 2026 · Muhurtham 11:10 PM · Fairview, TX. Reception: Saturday, Aug 15 · 6 PM · Plano, TX">
 <meta property="og:image" content="couple.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,7 +204,7 @@
 
   /* RSVP */
   label{display:block;font-family:'Karla',sans-serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--rose);margin:8px 0 12px}
-  input[type=text],textarea{
+  input[type=text],input[type=number],textarea{
     width:100%;padding:14px;margin-bottom:28px;
     border:none;border-bottom:1px solid var(--gold);border-radius:0;
     font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink);
@@ -378,6 +378,9 @@
       <label><input type="radio" name="reception" value="Unable to attend"><span>Unable to attend</span></label>
     </div>
 
+    <label for="guests">Number of guests attending (including you)</label>
+    <input type="number" id="guests" name="guests" min="1" max="15" value="1" required>
+
     <label for="message">Your wishes for the couple (optional)</label>
     <textarea id="message" name="message" placeholder="Write your blessings here…"></textarea>
 
@@ -470,7 +473,7 @@
   // ---------- Share ----------
   document.getElementById('shareBtn').addEventListener('click', async () => {
     const shareData = {
-      title: 'Leela Satish & Sree Sai Jyothsna — Wedding Invitation',
+      title: 'Leela Satish & Sri Sai Jyothsna — Wedding Invitation',
       text: 'Wedding: Friday, Aug 14, 2026 · Muhurtham 11:10 PM · Fairview, TX. Reception: Saturday, Aug 15 · 6 PM · Plano, TX',
       url: location.href
     };
@@ -492,7 +495,7 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   // ---------- Wishes wall ----------
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzMwE-FkKQ-DApACcSsgTnsSZnyIundI8_DxMX7Q7gLlt3PlwBEk2BgL7f1t3Brnz6Krg/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzYxoWvILS-1kM43ry1el_R47D18ks4Er1_tInRGAvdWOv5F-_oKUWx1Toq29JgGg8p5g/exec';
   const wall = document.getElementById('wishesWall');
   async function loadWishes(){
     try {
